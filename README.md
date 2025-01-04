@@ -62,13 +62,18 @@ My expertise spans Full-Stack Development, Backend Development, and DevOps, wher
 ### **Associate Developer**  
 **SAP**, Bengaluru, India *(July 2019 – February 2022)*  
 - Contributed to **Intelligent Asset Management** as a **Full-Stack Developer** and **DevOps Engineer**.  
-- Streamlined CI/CD pipelines, reducing release cycles and improving delivery speed.  
-- Built real-time dashboards to monitor code quality and detect vulnerabilities.  
+- Streamlined CI/CD pipelines, reducing release cycles and improving delivery speed.
+- Developed and integrated RESTful APIs to enable seamless communication between services and external systems.
+- Built real-time dashboards to monitor code quality and detect vulnerabilities.
+- Acted as a technical liaison for multiple consumers, guiding them through software integration and providing
+support to ensure a thorough understanding of our systems.
 
 ### **Scholar @ SAP**  
 **SAP**, Bengaluru, India *(August 2017 – July 2019)*  
 - Contributed to **Digital Manufacturing Insights** and **S/4 HANA Procure** as a **Full-Stack Developer**.  
-- Delivered high-quality features under tight deadlines in a high-pressure environment.  
+- Delivered high-quality features under tight deadlines in a high-pressure environment.
+- Gained hands-on experience from Monday to Friday while attending academic classes taught by BITS Pilani
+faculty on Saturdays
 
 ---
 
