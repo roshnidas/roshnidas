@@ -1,7 +1,3 @@
-Here’s a GitHub README file based on the content from your updated resume:
-
----
-
 # 👋 Hi, I'm **Roshni Das**
 
 🌍 **Location**: Dunstable, United Kingdom  
