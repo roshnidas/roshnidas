@@ -1,0 +1,307 @@
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot, % set margins without considering header and footer
+    top=2 cm, % seperation between body and page edge from the top
+    bottom=2 cm, % seperation between body and page edge from the bottom
+    left=2 cm, % seperation between body and page edge from the left
+    right=2 cm, % seperation between body and page edge from the right
+    footskip=1.0 cm, % seperation between body and footer
+    % showframe % for debugging 
+]{geometry} % for adjusting page geometry
+\usepackage{titlesec} % for customizing section titles
+\usepackage{tabularx} % for making tables with fixed width columns
+\usepackage{array} % tabularx requires this
+\usepackage[dvipsnames]{xcolor} % for coloring text
+\definecolor{primaryColor}{RGB}{0, 0, 0} % define primary color
+\usepackage{enumitem} % for customizing lists
+\usepackage{fontawesome5} % for using icons
+\usepackage{amsmath} % for math
+\usepackage[
+    pdftitle={Roshni Das's CV},
+    pdfauthor={Roshni Das},
+    pdfcreator={Roshni Das with LaTex},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref} % for links, metadata and bookmarks
+\usepackage[pscoord]{eso-pic} % for floating text on the page
+\usepackage{calc} % for calculating lengths
+\usepackage{bookmark} % for bookmarks
+\usepackage{lastpage} % for getting the total number of pages
+\usepackage{changepage} % for one column entries (adjustwidth environment)
+\usepackage{paracol} % for two and three column entries
+\usepackage{ifthen} % for conditional statements
+\usepackage{needspace} % for avoiding page brake right after the section title
+\usepackage{iftex} % check if engine is pdflatex, xetex or luatex
+
+% Ensure that generate pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+% Some settings:
+\raggedright
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt} % remove space before adjustwidth environment
+\pagestyle{empty} % no header or footer
+\setcounter{secnumdepth}{0} % no section numbering
+\setlength{\parindent}{0pt} % no indentation
+\setlength{\topskip}{0pt} % no top skip
+\setlength{\columnsep}{0.15cm} % set column seperation
+\pagenumbering{gobble} % no page numbering
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+
+\titlespacing{\section}{
+    % left space:
+    -1pt
+}{
+    % top space:
+    0.3 cm
+}{
+    % bottom space:
+    0.2 cm
+} % section title spacing
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$} % custom bullet points
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights
+
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+} % new environment for highlights for bullet entries
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0 cm + 0.00001 cm
+    }{
+        0 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+} % new environment for one column entries
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for two column entries
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+} % new environment for three column entries
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep
+} % new environment for the header
+
+\newcommand{\placelastupdatedtext}{% \placetextbox{<horizontal pos>}{<vertical pos>}{<stuff>}
+  \AddToShipoutPictureFG*{% Add <stuff> to current page foreground
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{$|$}
+
+    \begin{header}
+        \fontsize{25 pt}{25 pt}\selectfont Roshni Das
+
+        \vspace{5 pt}
+
+        \normalsize
+        \mbox{Dunstable, United Kingdom}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{mailto:youremail@yourdomain.com}{roshnidas8@gmail.com}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{tel:+44-0744-276-03-89}{07442760380}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/roshni-das/}{https://www.linkedin.com/in/roshni-das/}}%
+        \kern 5.0 pt%
+        \AND%
+        \kern 5.0 pt%
+        \mbox{\hrefWithoutArrow{https://github.com/roshnidas}{https://github.com/roshnidas}}%
+    \end{header}
+
+    \vspace{5 pt - 0.3 cm}
+
+
+    \section{Professional Summary}
+        
+        \begin{onecolentry}
+            Software Engineer with over 7 years of expertise in creating effective technology solutions within the logistics and digital supply chain sectors. Skilled in Java, Spring, Spring Boot, and AWS, I specialize in crafting, developing, and refining resilient applications to improve delivery efficiency and guarantee optimal system performance. 
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+        
+        \begin{onecolentry}
+            My expertise includes Full-Stack Development, Backend Development, and DevOps. With a Master’s in Software Engineering and a Bachelor’s in Computer Application, I have a strong academic foundation to complement my professional achievements.
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+    
+    \section{Skills}
+
+    \begin{onecolentry}
+        Java, Spring, Spring Boot, Kafka, RabbitMQ, ActiveMQ, SQL, Postgres, Oracle, AWS, Redis, Google BigQuery, Grafana, Prometheus, Docker, Git, JUnit, Mockito
+    \end{onecolentry}
+
+    \section{Experience}
+        
+        \begin{twocolentry}{
+            March 2022 – Present
+        }
+            \textbf{Software Engineer II}, Ocado Technology, Hatfield, United Kingdom
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Developed advanced technology solutions for Customer Fulfillment Centers (CFC) within the Ocado Logistics domain.
+                \item Designed, developed, and optimized applications and services using diverse technologies.
+                \item Fostered innovation by brainstorming and implementing ideas to enhance delivery efficiency and customer satisfaction.
+                \item Created comprehensive metrics to track each SKU throughout its lifecycle, ensuring full visibility and traceability across interactions with over 60 applications, thereby boosting operational efficiency.
+                \item Modernized multiple legacy applications by integrating new technologies, significantly enhancing performance and system efficiency.
+                \item Refactored and streamlined extensive portions of the codebase, improving maintainability and reducing technical debt.
+                \item Collaborated with cross-functional teams to deliver high-quality software solutions aligned with business objectives.
+            \end{highlights}
+        \end{onecolentry}
+
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            July 2019 – February 2022
+        }
+            \textbf{Associate Developer}, SAP Labs, Bengaluru, India
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Contributed to the development of Intelligent Asset Management in the Digital Supply Chain as a Full-stack Developer and DevOps Engineer Built and maintained a robust, high-performance system ensuring seamless integration
+                \item Improved efficiency and reliability across the digital supply chain through continuous development and optimization
+                \item Implemented continuous integration/continuous deployment (CI/CD) pipelines, reducing release cycles and improving software delivery speed.
+                \item Developed a comprehensive dashboard integrated with SonarQube, Black Duck, and code test coverage tools, providing real-time insights into code quality, security vulnerabilities, and coverage metrics.
+                \item Developed and integrated RESTful APIs to enable seamless communication between services and external systems.
+                \item Acted as a technical liaison for multiple consumers, guiding them through software integration and providing support to ensure a thorough understanding of our systems.
+            \end{highlights}
+        \end{onecolentry}
+
+        \vspace{0.2 cm}
+
+        \begin{twocolentry}{
+            August 2017 – July 2019
+        }
+            \textbf{Scholar @ SAP}, SAP Labs, Bengaluru, India
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Participated in the prestigious Scholar@SAP program in partnership with BITS Pilani, gaining exposure to a diverse range of SAP products and rotating across various business areas
+                \item Gained hands-on experience from Monday to Friday while attending academic classes taught by BITS Pilani faculty on Saturdays
+                \item Contributed to the development of the following key products:
+                \begin{itemize}
+                    \item S4 HANA Procure (Legal Content Management)
+                    \begin{itemize}
+                        \item Developed an application to randomize user activity, facilitating the creation of unit test cases for improved
+                        testing effectiveness.
+                    \end{itemize}
+                    \item Digital Manufacturing Insights (Digital Supply Chain)
+                    \begin{itemize}
+                        \item Served as a Full Stack Developer, responsible for building both the frontend and backend for multiple applications.
+                        \item Developed multiple features in a high-pressure environment, consistently delivering quality solutions under tight deadlines.
+                    \end{itemize}
+                \end{itemize}
+
+            \end{highlights}
+        \end{onecolentry}
+
+    \section{Education}
+
+        \begin{twocolentry}{
+            August 2017 – July 2021
+        }
+            \textbf{Birla Institute of Technology and Science, Pilani}, M.Tech in Software Engineering
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+        
+        \begin{twocolentry}{
+            July 2014 – June 2017
+        }
+            \textbf{Institute Of Engineering and Management, Kolkata},  Bachelors in Computer Applications (H)
+        \end{twocolentry}
+
+    \section{Hobbies}
+
+        \begin{onecolentry}
+            \begin{highlights}
+                \item Playing games on Xbox
+                \item Reading thriller, crime fiction books
+            \end{highlights}
+        \end{onecolentry}
+
+\end{document}
