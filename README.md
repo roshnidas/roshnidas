@@ -8,11 +8,8 @@
 
 ## 🚀 **About Me**
 
-Software Engineer with over 7 years of experience designing and delivering scalable, high-performing technology solutions, particularly in logistics and digital supply chain sectors. Skilled in Java, Spring, Spring Boot, and AWS, I specialize in building and optimizing resilient, distributed systems to enhance delivery efficiency and ensure seamless system performance at scale.
-
-I have extensive experience in designing systems, crafting solutions that support complex workflows, integrate with diverse systems, and scale to accommodate large user bases and high transaction volumes.
-
-My expertise spans Full-Stack Development, Backend Development, and DevOps, where I have designed and implemented fault-tolerant services, streamlined operations, and reduced technical debt in fast-paced, collaborative environments.
+I'm a Software Engineer with a few years of diving deep into building scalable, high-performing tech solutions. My toolkit's pretty solid with Java, Spring, Spring Boot, and AWS, and I really enjoy crafting resilient, distributed systems that help us deliver efficient products and ensure everything hums along perfectly.
+I thrive on turning tough problems into elegant system designs that support complex workflows, integrate beautifully with our existing tools, and scale up to handle any demand.
 
 ---
 
@@ -36,47 +33,6 @@ My expertise spans Full-Stack Development, Backend Development, and DevOps, wher
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)  
 ![Grafana](https://img.shields.io/badge/Grafana-F2A900?style=for-the-badge&logo=grafana&logoColor=white)  
 ![Prometheus](https://img.shields.io/badge/Prometheus-E6522C?style=for-the-badge&logo=prometheus&logoColor=white)  
-
----
-
-## 🌟 **Experience**
-
-### **Software Engineer II**  
-**Ocado Technology**, Hatfield, United Kingdom *(March 2022 – Present)*  
-- Developed advanced technology solutions for **Customer Fulfillment Centers (CFC)** within the Ocado Logistics domain.  
-- Designed, developed, and optimized applications and services to boost operational efficiency.  
-- Modernized legacy applications, improving performance by 30% and reducing technical debt by 40%.  
-- Collaborated with cross-functional teams to deliver high-quality, business-aligned solutions.  
-
-### **Associate Developer**  
-**SAP**, Bengaluru, India *(July 2019 – February 2022)*  
-- Contributed to **Intelligent Asset Management** as a **Full-Stack Developer** and **DevOps Engineer**.  
-- Streamlined CI/CD pipelines, reducing release cycles and improving delivery speed.
-- Developed and integrated RESTful APIs to enable seamless communication between services and external systems.
-- Built real-time dashboards to monitor code quality and detect vulnerabilities.
-- Acted as a technical liaison for multiple consumers, guiding them through software integration and providing
-support to ensure a thorough understanding of our systems.
-
-### **Scholar @ SAP**  
-**SAP**, Bengaluru, India *(August 2017 – July 2019)*  
-- Contributed to **Digital Manufacturing Insights** and **S/4 HANA Procure** as a **Full-Stack Developer**.  
-- Delivered high-quality features under tight deadlines in a high-pressure environment.
-- Gained hands-on experience from Monday to Friday while attending academic classes taught by BITS Pilani
-faculty on Saturdays
-
----
-
-## 🎓 **Education**
-
-- 🎓 **M.Tech in Software Engineering** – Birla Institute of Technology and Science, Pilani *(2017 – 2021)*  
-- 🎓 **BCA (Hons)** – Institute of Engineering and Management, Kolkata *(2014 – 2017)*  
-
----
-
-## 🎮 **Hobbies**
-
-- Playing strategy games on Xbox  
-- Reading thriller and crime fiction novels  
 
 ---
 
