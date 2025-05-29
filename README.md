@@ -1,12 +1,5 @@
 # 👋 Hi, I'm **Roshni Das**
 
-🌍 **Location**: Dunstable, United Kingdom  
-📧 **Email**: [roshnidas8@gmail.com](mailto:roshnidas8@gmail.com)  
-🔗 **LinkedIn**: [Roshni Das](https://www.linkedin.com/in/roshni-das/)  
-💻 **GitHub**: [Roshni Das](https://github.com/roshnidas)  
-
----
-
 ![Software Engineer](https://img.shields.io/badge/Software%20Engineer-Java%20%7C%20Spring%20Boot-blue?style=for-the-badge&logo=java&logoColor=white)  
 ![Backend Developer](https://img.shields.io/badge/Backend%20Developer-Distributed%20Systems-blueviolet?style=for-the-badge&logo=databricks&logoColor=white)  
 ![DevOps Engineer](https://img.shields.io/badge/DevOps-Docker%20%7C%20AWS-success?style=for-the-badge&logo=docker&logoColor=white)  
